@@ -1,0 +1,68 @@
+Sure, here is a basic structure of a Next.js application.
+
+```bash
+npx create-next-app@latest
+```
+
+The above command will create a new directory and generate a new Next.js application within it. 
+
+And the generated structure looks something like this:
+
+```bash
+my-app
+├── .next
+├── components
+│   └── Nav.js
+├── node_modules
+├── pages
+│   ├── _app.js
+│   ├── api
+│   │   └── hello.js
+│   └── index.js
+├── public
+│   ├── favicon.ico
+│   └── vercel.svg
+├── styles
+│   ├── globals.css
+│   └── Home.module.css
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+Here is a simple usage of Next.js pages and components:
+
+```jsx
+// pages/index.js
+import React from "react";
+import Nav from "../components/Nav";
+
+const Index = () => (
+  <div>
+    <Nav />
+    <p>Hello Next.js</p>
+  </div>
+);
+
+export default Index;
+```
+
+```jsx
+// components/Nav.js
+import React from "react";
+import Link from 'next/link';
+
+const Nav = () => (
+  <nav>
+    <Link href="/">
+      <a>Home</a>
+    </Link>
+    <Link href="/about">
+      <a>About</a>
+    </Link>
+  </nav>
+);
+
+export default Nav;
+```
+Please keep in mind this a basic example and Next.js offers much more features such as server-side rendering, static site generation, API routes and so on. The official Next.js documentation is a great way to explore these topics further.
